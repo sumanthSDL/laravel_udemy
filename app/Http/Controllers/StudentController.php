@@ -13,6 +13,10 @@ public function delete(){
     $student = Student::where('id',2) ->first();
     $student->delete();
 }
+public function show_all_students(){
+    $all_students = Student::with('rPhone')->get();
+    return view('all_students', compact('all_students'));
+}
 }
 
 

@@ -8,14 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'student_id',
-        'name',
-        'email',
-        'phone',
-        // Add more column names here
-    ];
+    public function rPhone()
+    {
+        return $this->hasOne(Phone::class);
+    }
 
     // Define relationships or additional methods here
 }
+
+
+// protected $fillable = [
+//     'student_id',
+//     'name',
+//     'email',
+//     'phone',
+//     // Add more column names here
+// ];
