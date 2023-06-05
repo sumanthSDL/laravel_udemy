@@ -1,5 +1,7 @@
 @foreach ($all_students as $item)
     {{ $item->name }} <br>
     {{ $item->email }} <br>
-    {{ $item->rPhone->phone }}<br><br>
+    @foreach($item->rPhone as $single)
+    {{ $single->phone }}<br><br>
+    @endforeach
 @endforeach

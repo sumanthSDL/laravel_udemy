@@ -10,7 +10,7 @@ class Student extends Model
     use HasFactory;
     public function rPhone()
     {
-        return $this->hasOne(Phone::class);
+        return $this->hasMany(Phone::class);
     }
 
     // Define relationships or additional methods here
